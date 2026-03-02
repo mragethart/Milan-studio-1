@@ -28,10 +28,10 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 px-4 relative">
+    <section id="faq" className="py-20 md:py-32 px-4 relative">
       <div className="container mx-auto max-w-3xl">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-20">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
             Často se <span className="text-gradient">ptáte</span>
           </h2>
         </div>
@@ -54,7 +54,7 @@ export default function FAQ() {
               <div
                 className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openIndex === i ? "max-h-40 pb-5 opacity-100" : "max-h-0 opacity-0"}`}
               >
-                <p className="text-slate-700 font-medium">{faq.a}</p>
+                <p className="text-slate-600">{faq.a}</p>
               </div>
             </div>
           ))}

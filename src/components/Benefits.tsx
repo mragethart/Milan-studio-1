@@ -2,7 +2,7 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function Benefits() {
   return (
-    <section id="proc-se-mnou" className="py-24 px-4 relative">
+    <section id="proc-se-mnou" className="py-20 md:py-32 px-4 relative">
       <div className="container mx-auto max-w-6xl">
         <div className="bg-slate-900 rounded-[40px] p-8 md:p-16 relative overflow-hidden shadow-2xl border border-slate-800">
           <div
@@ -14,14 +14,14 @@ export default function Benefits() {
 
           <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-white">
                 Proč do toho jít <span className="text-primary">společně?</span>
               </h2>
               <p className="text-lg text-slate-300 mb-8 font-medium">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna aellentesque sit amet sapien fringilla. Or sit amet, consectetur adipiscing elit.
               </p>
 
-              <a href="#kontakt" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-full transition-all shadow-[0_10px_30px_-10px_rgba(0,204,153,0.6)] hover:shadow-[0_15px_40px_-10px_rgba(0,204,153,0.8)] hover:-translate-y-1">
+              <a href="#kontakt" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-full transition-all shadow-[0_8px_24px_-8px_rgba(0,204,153,0.5)] hover:shadow-[0_12px_32px_-8px_rgba(0,204,153,0.6)] hover:-translate-y-1">
                 Konzultace zdarma <ArrowRight size={20} />
               </a>
             </div>

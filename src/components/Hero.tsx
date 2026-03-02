@@ -39,9 +39,9 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* Nadpis vynuceně na 2 řádky na větších displejích */}
-            <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4.2rem] font-bold leading-[1.15] tracking-tight mb-6 text-slate-900">
-              Cesta která dává smysl <br className="hidden sm:block" />
+            {/* Nadpis vynuceně na 2 řádky */}
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] xl:text-[3.8rem] font-bold leading-[1.15] tracking-tight mb-6 text-slate-900 whitespace-nowrap sm:whitespace-normal">
+              Finance co mají smysl <br />
               <span className="text-gradient">pro váš růst a klidnou mysl.</span>
             </h1>
             
@@ -65,7 +65,7 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-              <a href="#kontakt" className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_10px_30px_-10px_rgba(0,204,153,0.6)] hover:shadow-[0_15px_40px_-10px_rgba(0,204,153,0.8)] hover:-translate-y-1 flex items-center justify-center gap-2">
+              <a href="#kontakt" className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_8px_24px_-8px_rgba(0,204,153,0.5)] hover:shadow-[0_12px_32px_-8px_rgba(0,204,153,0.6)] hover:-translate-y-1 flex items-center justify-center gap-2">
                 Konzultace zdarma <ArrowRight size={20} />
               </a>
               <a href="#spoluprace" className="w-full sm:w-auto bg-white border border-slate-200 px-8 py-4 rounded-full font-bold text-lg text-slate-900 hover:bg-slate-50 hover:shadow-md transition-all flex items-center justify-center gap-2">

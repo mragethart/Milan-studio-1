@@ -2,14 +2,14 @@ import { Mail, Phone, MapPin, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="kontakt" className="py-24 px-4 relative">
+    <section id="kontakt" className="py-20 md:py-32 px-4 relative">
       <div className="container mx-auto max-w-6xl">
         <div className="glass-dark rounded-[40px] p-8 md:p-16 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/20 to-transparent pointer-events-none"></div>
 
           <div className="relative z-10 flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/2">
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
                 Pojďme se <span className="text-primary">potkat</span>
               </h2>
               <p className="text-lg text-slate-300 mb-8 font-medium">
@@ -107,7 +107,7 @@ export default function Contact() {
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none font-medium"
                   ></textarea>
                 </div>
-                <button className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-full transition-all flex items-center justify-center gap-2 mt-4 shadow-[0_10px_30px_-10px_rgba(0,204,153,0.6)] hover:shadow-[0_15px_40px_-10px_rgba(0,204,153,0.8)] hover:-translate-y-1">
+                <button className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-full transition-all flex items-center justify-center gap-2 mt-4 shadow-[0_8px_24px_-8px_rgba(0,204,153,0.5)] hover:shadow-[0_12px_32px_-8px_rgba(0,204,153,0.6)] hover:-translate-y-1">
                   Odeslat zprávu <ArrowRight size={20} />
                 </button>
               </form>

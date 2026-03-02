@@ -4,47 +4,47 @@ import { TrendingDown, Home, FileText, PiggyBank, ShieldAlert, HelpCircle } from
 export default function PainPoints() {
   const points = [
     {
-      icon: <TrendingDown className="text-orange-600" size={32} />,
+      icon: <TrendingDown className="text-red-500" size={28} />,
       title: "Inflace jako požírač úspor",
-      desc: "Peníze na běžném účtu ztrácí hodnotu rychleji, než je stíháte vydělat.",
+      desc: "Peníze na běžném účtu ztrácí hodnotu rychleji, než je stíháte vydělat. Pokud vaše úspory neleží na správných místech, inflace z nich každý den ukrajuje.",
     },
     {
-      icon: <Home className="text-pink-600" size={32} />,
+      icon: <Home className="text-orange-500" size={28} />,
       title: "Sen o bydlení se vzdaluje",
-      desc: "Hypotéky jsou drahé a podmínky složité. Bojíte se, že na vlastní bydlení nikdy nedosáhnete.",
+      desc: "Hypotéky jsou drahé a podmínky složité. Bojíte se, že na vlastní bydlení nikdy nedosáhnete a budete muset žít v nájmu.",
     },
     {
-      icon: <FileText className="text-purple-600" size={32} />,
+      icon: <FileText className="text-rose-500" size={28} />,
       title: "Chaos ve smlouvách",
-      desc: "Máte několik pojistek a spoření, ale nevíte, co přesně kryjí a zda nejsou zbytečně drahé.",
+      desc: "Máte několik pojistek a spoření, ale nevíte, co přesně kryjí a zda nejsou zbytečně drahé. Platíte za něco, co možná ani nepotřebujete.",
     },
     {
-      icon: <PiggyBank className="text-blue-600" size={32} />,
+      icon: <PiggyBank className="text-amber-500" size={28} />,
       title: "Obavy o důchod",
-      desc: "Státní důchod nebude stačit. Nevíte, kolik si odkládat, abyste si udrželi životní úroveň.",
+      desc: "Státní důchod nebude stačit. Nevíte, kolik si odkládat, abyste si udrželi životní úroveň a zajistili si klidné stáří.",
     },
     {
-      icon: <ShieldAlert className="text-primary-dark" size={32} />,
+      icon: <ShieldAlert className="text-red-500" size={28} />,
       title: "Zajištění rodiny",
-      desc: "Co když se něco stane? Chcete mít jistotu, že vaše rodina bude finančně v bezpečí za každé situace.",
+      desc: "Co když se něco stane? Chcete mít jistotu, že vaše rodina bude finančně v bezpečí za každé situace a nepřijde o střechu nad hlavou.",
     },
     {
-      icon: <HelpCircle className="text-slate-600" size={32} />,
+      icon: <HelpCircle className="text-orange-500" size={28} />,
       title: "Zmatek v produktech",
-      desc: "Trh je přesycený nabídkami a vy nevíte, komu věřit a jaký produkt je pro vás ten pravý.",
+      desc: "Trh je přesycený nabídkami a vy nevíte, komu věřit a jaký produkt je pro vás ten pravý. Pomohu vám se zorientovat a vybrat to nejlepší.",
     },
   ];
 
   return (
-    <section className="py-24 px-4 relative">
+    <section className="py-20 md:py-32 px-4 relative">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-20">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
             Co vás <span className="text-gradient-purple">trápí?</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {points.map((point, i) => (
             <motion.div
               key={i}
@@ -52,16 +52,22 @@ export default function PainPoints() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-strong p-8 rounded-[32px] hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group"
+              className="relative bg-slate-900 p-8 rounded-3xl shadow-lg border border-slate-800 hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-1 transition-all duration-300 group flex flex-col overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/40 rounded-full blur-2xl -mr-10 -mt-10 transition-transform group-hover:scale-150"></div>
-              <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-md border border-slate-100">
-                {point.icon}
+              {/* Animated top border */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-slate-800 group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:via-orange-500 group-hover:to-rose-500 transition-all duration-500"></div>
+              
+              <div>
+                <div className="w-14 h-14 rounded-2xl bg-slate-800 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-red-500/10 transition-all duration-300">
+                  {point.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-3 font-display text-white group-hover:text-red-400 transition-colors duration-300">
+                  {point.title}
+                </h3>
+                <p className="leading-relaxed text-slate-400">
+                  {point.desc}
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-3 font-display text-slate-900">
-                {point.title}
-              </h3>
-              <p className="text-slate-700 leading-relaxed font-medium">{point.desc}</p>
             </motion.div>
           ))}
         </div>

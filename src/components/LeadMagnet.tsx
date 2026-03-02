@@ -2,7 +2,7 @@ import { ArrowRight, Download, TrendingUp, Shield } from 'lucide-react';
 
 export default function LeadMagnet() {
   return (
-    <section id="prirucka" className="py-24 px-4 relative">
+    <section id="prirucka" className="py-20 md:py-32 px-4 relative">
       <div className="container mx-auto max-w-6xl">
         <div className="bg-slate-900 rounded-[40px] p-8 md:p-16 relative overflow-hidden shadow-2xl border border-slate-800">
           <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-accent-blue to-accent-purple"></div>
@@ -12,7 +12,7 @@ export default function LeadMagnet() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center relative z-10">
             <div className="w-full lg:w-1/2">
               <div className="mb-8 text-center lg:text-left">
-                <h2 className="font-display text-4xl md:text-5xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-white leading-[1.1] tracking-tight mb-6">
                   Příručka finančního zdraví <span className="text-primary">ZDARMA</span>
                 </h2>
                 <p className="text-lg text-slate-300 leading-relaxed font-medium">
@@ -28,7 +28,7 @@ export default function LeadMagnet() {
                     className="w-full bg-white/10 border border-white/20 rounded-full px-6 py-4 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/50 transition-all text-white font-medium placeholder-white/50"
                   />
                 </div>
-                <button className="w-full bg-primary hover:bg-primary-dark text-white font-display font-bold text-lg tracking-wide py-4 px-6 rounded-full shadow-[0_10px_30px_-5px_rgba(0,204,153,0.4)] hover:shadow-[0_15px_35px_-5px_rgba(0,204,153,0.6)] hover:-translate-y-1 transform transition-all duration-300 flex items-center justify-center gap-3">
+                <button className="w-full bg-primary hover:bg-primary-dark text-white font-display font-bold text-lg tracking-wide py-4 px-6 rounded-full shadow-[0_8px_24px_-8px_rgba(0,204,153,0.5)] hover:shadow-[0_12px_32px_-8px_rgba(0,204,153,0.6)] hover:-translate-y-1 transform transition-all duration-300 flex items-center justify-center gap-3">
                   Stáhnout ZDARMA! <ArrowRight size={20} />
                 </button>
               </form>
