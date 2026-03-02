@@ -6,6 +6,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import PainPoints from "./components/PainPoints";
+import Transition from "./components/Transition";
 import Solutions from "./components/Solutions";
 import Process from "./components/Process";
 import Benefits from "./components/Benefits";
@@ -18,6 +19,9 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-body overflow-x-hidden relative selection:bg-primary selection:text-white bg-grid-pattern">
+      {/* Noise Texture Overlay */}
+      <div className="fixed inset-0 z-50 bg-noise mix-blend-overlay"></div>
+
       {/* Background Blobs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-primary/10 blur-[120px] mix-blend-multiply animate-blob"></div>
@@ -31,6 +35,7 @@ export default function App() {
       <main className="relative z-10">
         <Hero />
         <PainPoints />
+        <Transition />
         <Solutions />
         <Process />
         <Benefits />

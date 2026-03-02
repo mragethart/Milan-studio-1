@@ -14,12 +14,12 @@ export default function PainPoints() {
       desc: "Hypotéky jsou drahé a podmínky složité. Bojíte se, že na vlastní bydlení nikdy nedosáhnete a budete muset žít v nájmu.",
     },
     {
-      icon: <FileText className="text-rose-500" size={28} />,
+      icon: <FileText className="text-red-500" size={28} />,
       title: "Chaos ve smlouvách",
       desc: "Máte několik pojistek a spoření, ale nevíte, co přesně kryjí a zda nejsou zbytečně drahé. Platíte za něco, co možná ani nepotřebujete.",
     },
     {
-      icon: <PiggyBank className="text-amber-500" size={28} />,
+      icon: <PiggyBank className="text-orange-500" size={28} />,
       title: "Obavy o důchod",
       desc: "Státní důchod nebude stačit. Nevíte, kolik si odkládat, abyste si udrželi životní úroveň a zajistili si klidné stáří.",
     },
@@ -36,10 +36,13 @@ export default function PainPoints() {
   ];
 
   return (
-    <section className="py-20 md:py-32 px-4 relative">
+    <section className="py-24 md:py-32 px-4 relative bg-[#FDFBFB] border-y border-slate-100">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-20">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
+        <div className="text-center mb-16 md:mb-24">
+          <span className="text-red-500 font-bold tracking-widest uppercase text-sm mb-4 block">
+            Realita dneška
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Co vás <span className="text-gradient-purple">trápí?</span>
           </h2>
         </div>
@@ -52,22 +55,20 @@ export default function PainPoints() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="relative bg-slate-900 p-8 rounded-3xl shadow-lg border border-slate-800 hover:shadow-2xl hover:shadow-red-900/20 hover:-translate-y-1 transition-all duration-300 group flex flex-col overflow-hidden"
+              className="relative bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1 transition-all duration-300 group flex flex-col overflow-hidden"
             >
               {/* Animated top border */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-slate-800 group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:via-orange-500 group-hover:to-rose-500 transition-all duration-500"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-slate-100 group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:via-orange-500 group-hover:to-red-500 transition-all duration-500"></div>
               
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-slate-800 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-red-500/10 transition-all duration-300">
-                  {point.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3 font-display text-white group-hover:text-red-400 transition-colors duration-300">
-                  {point.title}
-                </h3>
-                <p className="leading-relaxed text-slate-400">
-                  {point.desc}
-                </p>
+              <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-white group-hover:shadow-md transition-all duration-300">
+                {point.icon}
               </div>
+              <h3 className="text-xl font-bold mb-3 font-display text-slate-900 group-hover:text-red-600 transition-colors duration-300">
+                {point.title}
+              </h3>
+              <p className="leading-relaxed text-slate-600">
+                {point.desc}
+              </p>
             </motion.div>
           ))}
         </div>

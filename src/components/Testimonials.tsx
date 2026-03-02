@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -54,11 +54,20 @@ export default function Testimonials() {
     return result;
   };
 
+  // Auto-advance
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 8000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section id="reference" className="py-20 md:py-32 px-4 relative">
+    <section id="reference" className="py-24 md:py-32 px-4 relative bg-white">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-20">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
+        <div className="text-center mb-16 md:mb-24">
+          <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">
+            Příběhy klientů
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold">
             Co říkají <span className="text-gradient">moji klienti?</span>
           </h2>
         </div>
@@ -74,7 +83,7 @@ export default function Testimonials() {
                   animate={{ opacity: 1, scale: isMiddle ? 1.05 : 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.9, x: -20 }}
                   transition={{ duration: 0.4 }}
-                  className={`${isMiddle ? 'glass-dark z-10 shadow-2xl' : 'glass-strong opacity-80'} p-8 md:p-10 rounded-3xl relative flex flex-col`}
+                  className={`${isMiddle ? 'bg-slate-900 z-10 shadow-2xl text-white' : 'bg-slate-50 opacity-80 text-slate-900'} p-8 md:p-10 rounded-3xl relative flex flex-col border border-slate-100`}
                 >
                   <div className="mb-6 flex justify-between items-start">
                     <svg
@@ -89,11 +98,11 @@ export default function Testimonials() {
                     </svg>
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, idx) => (
-                        <Star key={idx} size={16} className="fill-amber-400 text-amber-400" />
+                        <Star key={idx} size={16} className={isMiddle ? "fill-amber-400 text-amber-400" : "fill-amber-400 text-amber-400"} />
                       ))}
                     </div>
                   </div>
-                  <p className={`text-lg mb-8 leading-relaxed flex-grow ${isMiddle ? 'text-slate-200' : 'text-slate-700'}`}>"{t.text}"</p>
+                  <p className={`text-lg mb-8 leading-relaxed flex-grow ${isMiddle ? 'text-slate-200' : 'text-slate-600'}`}>"{t.text}"</p>
                   <div className="flex items-center gap-4 mt-auto">
                     <img
                       src={t.img}
@@ -102,8 +111,8 @@ export default function Testimonials() {
                       referrerPolicy="no-referrer"
                     />
                     <div>
-                      <h4 className={`font-bold ${isMiddle ? 'text-white' : 'text-slate-900'}`}>{t.name}</h4>
-                      <p className={`text-sm font-medium ${isMiddle ? 'text-slate-400' : 'text-slate-600'}`}>{t.role}</p>
+                      <h4 className={`font-bold font-display ${isMiddle ? 'text-white' : 'text-slate-900'}`}>{t.name}</h4>
+                      <p className={`text-sm font-medium ${isMiddle ? 'text-slate-400' : 'text-slate-500'}`}>{t.role}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -124,7 +133,7 @@ export default function Testimonials() {
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${idx === currentIndex ? 'bg-primary w-6' : 'bg-slate-300 hover:bg-slate-400'}`}
+                className={`h-2.5 rounded-full transition-all duration-300 ${idx === currentIndex ? 'bg-primary w-8' : 'bg-slate-300 w-2.5 hover:bg-slate-400'}`}
               />
             ))}
           </div>

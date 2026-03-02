@@ -39,7 +39,7 @@ export default function Process() {
   ];
 
   return (
-    <section id="spoluprace" className="py-24 md:py-32 px-4 relative bg-slate-50 text-slate-900 overflow-hidden" ref={containerRef}>
+    <section id="spoluprace" className="py-32 md:py-48 px-4 relative bg-slate-50 text-slate-900 overflow-hidden" ref={containerRef}>
       {/* Background glows */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-purple/5 rounded-full blur-[100px] pointer-events-none"></div>
